@@ -18,3 +18,13 @@ Programı yazın:
 Programı Çalıştırın:
 - F5
 
+Telif Hakkı: Bu programın hiç bir telif hakkı yoktur. 
+İstediğiniz gibi değiştirebilir, kullanabilir, kopyalabilir ve dağıtabilirisiniz.
+
+DR. HAYATİ TAŞTAN
+
+HARİTA YÜKSEK MÜHENDİSİ
+
+COĞRAFİ BİLGİ TEKNOLOJİLERİ VE İŞ ZEKASI DANIŞMANI (40 YILLIK TECRÜBELİ)
+
+haytastan@gmail.com
