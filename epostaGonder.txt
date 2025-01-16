@@ -31,7 +31,7 @@ Sub epostaGonder()
             & vbNewLine & " " _
             & vbNewLine & "63 yaşında bir büyüğünüz (abiniz, amcanız) olarak dün itibarıyla emeklilik dilekçemi verdim. Daha önceki iş yerlerimde (Harita Genel Müdürlüğü: 24 yıl, TÜRKSAT A.Ş.:6 yıl, AFAD: 10 yıl) olduğu gibi davet üzerine girdiğim bu iş yerinden de, 1 yıllık bir çalışma sonrası yine daha önceki işyerlerimde olduğu gibi yine kendi isteğimle ayrılıyorum. " _
             & vbNewLine & " " _
-            & vbNewLine & "Hiç kimseye kırgın ve küskün değilim. erbiriniz kendi alanlarınızda pırlanta kişilersiniz. Hepinizi çok sevdim ve devlet terbiyesi gereği olarak da çok saydım." _
+            & vbNewLine & "Hiç kimseye kırgın ve küskün değilim. Herbiriniz kendi alanlarınızda pırlanta kişilersiniz. Hepinizi çok sevdim ve devlet terbiyesi gereği olarak da çok saydım." _
             & vbNewLine & " " _
             & vbNewLine & "Sizlere de, benim gibi aileniz ve tüm sevdiklerinizle birlikte sağlıklı ve huzurlu bir emeklilik diliyor, çalışmalarınızdaki başarılarınızın artarak devamını temenni ediyor, selam ve sevgilerimi sunuyorum." _
             & vbNewLine & " " _
