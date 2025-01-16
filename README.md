@@ -1,11 +1,11 @@
-# EXCEL ORTAMINDA TOPLU EPOSTA GÖNDERME:
+# EXCEL ORTAMINDA TOPLU EPOSTA GÖNDERME PROGRAMI (VBA)
 
 ## Bir Excel Tablosu oluşturun:
 - Tablonun ilk satırına TO, CC, İSİM, ÜNVAN şeklinde kolon isimlerini yazın
 - Alttaki satırlara Gidecek eposta adresi (TO), Bilgi Verilecek eposta adresi (CC), Alıcının İsmi, Alıcının Ünvanı bilgilerini girin
 - Tablonun adını "personel" olarak değiştirin
 
-## Excel ortamında öncelikle Geliştiri Modunu aktif edin
+## Excel ortamında öncelikle Geliştiri Modunu aktif edin:
 - Dosya / Seçenekler / Eklentiler / Çözümleme Araç Tkımı - VBA / Git
 - Ekrana Gelen Pencerede Çözümleme Araç Takımı -VBA kutusunu seçin ve TAMAM
 
