@@ -26,5 +26,6 @@ DR. HAYATİ TAŞTAN
 HARİTA YÜKSEK MÜHENDİSİ
 
 COĞRAFİ BİLGİ TEKNOLOJİLERİ VE İŞ ZEKASI DANIŞMANI (40 YILLIK TECRÜBELİ)
-
-haytastan@gmail.com
+ePosta: haytastan@gmail.com
+Linkedin: https://www.linkedin.com/in/hayatitastan/
+GitHub: https://github.com/haytastan
