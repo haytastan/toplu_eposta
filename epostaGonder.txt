@@ -1,53 +1,58 @@
-' ====================================================================================
-' Dr. Hayati TAŞTAN
-' Harita Yüksek Mühendisi
-' Emekli Kıdemli Albay
-' 16 Ocak 2025 (CBS Genel Müdür Yardımcılığımdan Kendi İsteğimle Emekli Olduğum Tarih
-' ========== YUKARIDAKİ BİLGİLERİ KENDİNİZE GÖRE DEĞİŞTİREBİLİRSİNİZ :)  =============
 Sub epostaGonder()
-Dim OutlookApp As Object
+    Dim OutlookApp As Object
     Dim MailItem As Object
     Dim ws As Worksheet
     Dim i As Integer
-    
+    ' ====================================================================================
+    ' Dr. Hayati TAŞTAN
+    ' Harita Yüksek Mühendisi
+    ' Emekli Kıdemli Albay
+    ' 16 Ocak 2025 (CBS Genel Müdür Yardımcılığımdan Kendi İsteğimle Emekli Olduğum Tarih
+    ' ========== YUKARIDAKİ AÇIKLAMALARI KENDİNİZE GÖRE DEĞİŞTİREBİLİRSİNİZ :)  =============
+
     ' Excel tablosunu seçme:
-    Set ws = ThisWorkbook.Sheets("personel") ' Excel tablonuzun adını buraya yazın
+    Set ws = ThisWorkbook.Sheets("personel3") ' Change if your sheet has a different name
 
     ' Outlook nesnesini tanımlama:
     Set OutlookApp = CreateObject("Outlook.Application")
     
-    ' Exceldeki tüm satırları tek tek okuma ve eposta gönderme (Verilerin ikinci satırdan başladığı varsamıyla)
+    ' Exceldeki tüm satırları tek tek okuma ve eposta gönderme (Verilerin ikinci satırdan başladığı varsamıyla):
     i = 2
     While ws.Cells(i, 1).Value <> ""
         Set MailItem = OutlookApp.CreateItem(0)
         
         With MailItem
-            .To = ws.Cells(i, 1).Value  	' A kolonundaki Göndereceğiniz eposta adresleri
-            .CC = ws.Cells(i, 2).Value  	' B kolonundaki Bilgi (CC) olarak göndereceğiniz eposta adresleri
-            .Subject = "Emeklilik Mesajı" 	' Konu olarak yazacağınız ifade
-            .Body = "Sayın" 			' Hitap ifadesi _
-            & vbNewLine & ws.Cells(i, 3).Value & "" 	' Göndereceğiniz kişinin adı ve soyadının olduğu C kolonu (3'üncü kolon) _
-            & vbNewLine & ws.Cells(i, 4).Value & ""	' Göndereceğiniz kişinin ünvanı/mesleği/görevi vb. D kolonu (4'üncü kolon) _
-            & vbNewLine & " " 				' Boşluk satırı _
-            & vbNewLine & "63 yaşında bir büyüğünüz (abiniz, amcanız) olarak ..."  ' Birinci Paragraf _
-            & vbNewLine & " " 	                         ' Boşluk satırı _
-            & vbNewLine & "Hiç kimseye kırgın ve küskün değilim. ..." 	' İkinci Paragraf _
-            & vbNewLine & " " _				' Boşluk satırı _
-            & vbNewLine & "Sizlere de, benim gibi aileniz ve tüm ..." 	'Üçüncü Paragraf _
-            & vbNewLine & " " _				' Boşluk satırı _
-            & vbNewLine & "Dr. Hayati TAŞTAN" 		' Adınız ve Soyadınız _
-            & vbNewLine & "Harita Yüksek Mühendisi" 	' Mesleğiniz _
-            & vbNewLine & "Emekli Kıdemli Albay" 	' Göreviniz _
-            & vbNewLine & "haytastan@gmail.com	 	' Göreviniz _
-            & vbNewLine & " " 				' Boşluk satırı _
-            & vbNewLine & "NOT:" 			' NOT _
-            & vbNewLine & "Linkedin kullananlar aşağıdaki derleme makalemi okuyabilirler."    	' NOT Satırı -1 _
-            & vbNewLine & "https://www.linkedin.com/posts/activity-7283067065681276928-aOdA/"   ' NOT Satırı -2 _
-            & vbNewLine & "Bundan sonra beni Linkedin'den takip edebilirisiniz :)"		' NOT Satırı -3 _
-            
-            
-            '.Display 					' Eğer göndermeden önce epostaları görmek isterseniz, satır başındaki ' sembolünü silin
-	    .Send 					' Gönderme işlemi
+            .To = ws.Cells(i, 1).Value      ' A kolonundaki Göndereceğiniz eposta adresleri
+            .CC = ws.Cells(i, 2).Value      ' B kolonundaki Bilgi (CC) olarak göndereceğiniz eposta adresleri
+            .Subject = "Emeklilik Mesajı (Toplu eposta gönderen VBA Kaynak Kodu ve Kullanım Talimatı)"   ' Konu olarak yazacağınız ifade
+            .Body = "Sayın" _
+            & vbNewLine & ws.Cells(i, 3).Value & "" _
+            & vbNewLine & ws.Cells(i, 4).Value & "" _
+            & vbNewLine & " " _
+            & vbNewLine & "63 yaşında bir büyüğünüz (abiniz, amcanız) olarak dün itibarıyla emeklilik dilekçemi verdim. Daha önceki iş yerlerimde (Harita Genel Müdürlüğü: 24 yıl, TÜRKSAT A.Ş.:6 yıl, AFAD: 10 yıl) olduğu gibi davet üzerine girdiğim bu iş yerinden de, 1 yıllık bir çalışma sonrası yine daha önceki işyerlerimde olduğu gibi yine kendi isteğimle ayrılıyorum. " _
+            & vbNewLine & " " _
+            & vbNewLine & "Hiç kimseye kırgın ve küskün değilim. erbiriniz kendi alanlarınızda pırlanta kişilersiniz. Hepinizi çok sevdim ve devlet terbiyesi gereği olarak da çok saydım." _
+            & vbNewLine & " " _
+            & vbNewLine & "Sizlere de, benim gibi aileniz ve tüm sevdiklerinizle birlikte sağlıklı ve huzurlu bir emeklilik diliyor, çalışmalarınızdaki başarılarınızın artarak devamını temenni ediyor, selam ve sevgilerimi sunuyorum." _
+            & vbNewLine & " " _
+            & vbNewLine & "===================================================" _
+            & vbNewLine & "Dr. Hayati TAŞTAN" _
+            & vbNewLine & "Harita Yüksek Mühendisi" _
+            & vbNewLine & "Coğrafi Bilgi Teknolojileri ve İş Zekası Danışmanı " _
+            & vbNewLine & "ePosta: haytastan@gmail.com" _
+            & vbNewLine & "Linkedin: https://www.linkedin.com/in/hayatitastan/" _
+            & vbNewLine & "GitHub: https://github.com/haytastan" _
+            & vbNewLine & "===================================================" _
+            & vbNewLine & "NOT:" _
+            & vbNewLine & "Linkedin kullananlar aşağıdaki derleme makalemi okuyabilirler." _
+            & vbNewLine & "https://www.linkedin.com/posts/activity-7283067065681276928-aOdA/" _
+            & vbNewLine & "Bundan sonra beni Linkedin'den takip edebilirisiniz :)" _
+            & vbNewLine & " " _
+            & vbNewLine & "Bu epostayı otomatik olarak tüm personele göndermek için yazdığım VBA programı kaynak kodu ve kullanım talimatı adresi: " _
+            & vbNewLine & "https://github.com/haytastan/toplu_eposta"
+
+            .Send ' Göndermeden önce postalar nasıl görüneceğini görmek için satır başına ' karakterini yazın
+            '.Display ' Göndereceğiniz epostalar nasıl görüneceğini görmek için satır başındaki ' karakterini silin
         End With
         
         i = i + 1
