@@ -13,7 +13,7 @@
 - Programla editörünü açın (ALT+F11)
 - Insert /Module
 - Ekrana Gelen Pencere'ye epostaGonder.txt dosyasının için kopyalayıp yapıştırın
-- Programı Kaydedin Ctrl ve s tüşlerına birlikte basın)
+- Programı Kaydedin (Ctrl ve s tuşlerına birlikte basın)
   
 ## Programı Çalıştırın:
 - F5
